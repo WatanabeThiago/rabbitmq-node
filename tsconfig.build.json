@@ -1,0 +1,30 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "noEmit": false,
+    "baseUrl": "./src",
+    "paths": {
+      "@api/*": ["api/*"],
+      "@app/*": ["app/*"],
+      "@domain/*": ["domain/*"],
+      "@crosscutting/*": ["infra/crosscutting/*"],
+      "@infra/*": ["infra/*"],
+      "@data/*": ["infra/data/*"],
+      "@middleware/*": ["infra/middleware/*"],
+      "@helpers/*": ["helpers/*"],
+      "@modules/*": ["infra/modules/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "test"]
+}

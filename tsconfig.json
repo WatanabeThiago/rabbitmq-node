@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@api/*": ["api/*"],
+      "@app/*": ["app/*"],
+      "@infra/*": ["infra/*"],
+      "@domain/*": ["domain/*"],
+      "@crosscutting/*": ["infra/crosscutting/*"],
+      "@data/*": ["infra/data/*"],
+      "@modules/*": ["infra/modules/*"],
+      "@testunit/*": ["../test/unit/*"]
+    }
+  },
+  "include": ["./src/**/*", "./test/**/*"],
+  "exclude": ["node_modules"]
+}
